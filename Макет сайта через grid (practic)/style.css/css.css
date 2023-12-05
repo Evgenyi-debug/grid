@@ -1,0 +1,35 @@
+.container{
+    display: grid;
+    /* создать сетку с двенадцатью столбцами, каждый шириной доли единицы (1/12 общей ширины) */
+    grid-template-columns: repeat(12, 1fr);
+    /* Создать три строки, где первая будет 50px высотой, вторая 350px и третья 50px */
+    grid-template-rows: 50px 350px 50px;
+    /* добавить промежуток между элементами в сетке. */
+    grid-gap: 5px;
+/* Создание разметки сайта, каждая буква в дальнейшем будет присваиваться к части сайта.
+Макетом сайта можно легко управлять с помощью изменения букв в макете*/
+    grid-template-areas: 
+    "h h h h h h h h h h h h"
+    "m m c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+}
+.header{
+    /* Присваивание верхушке сайта чать "h" */
+    grid-area: h;
+    background-color: rgb(70, 141, 70);
+}
+.menu{
+    /* Присваивание боковой части сайта часть "m" */
+    grid-area: m;
+    background-color: rgb(196, 196, 38);
+}
+.content{
+    /* Присваивание основной части сайта часть "c" */
+    grid-area: c;
+    background-color: rgb(34, 34, 149);
+}
+.footer{
+    /* Присваивание "подвалу" сайта часть "f" */
+    grid-area: f;
+    background-color: plum;
+}
